@@ -1,0 +1,41 @@
+{
+    "name": "grafana-alloy",
+    "displayName": "Grafana Alloy",
+    "description": "Grafana Alloy support",
+    "version": "0.1.0",
+    "author": "Grafana",
+    "publisher": "Grafana",
+    "repository": {
+      "type": "git",
+      "url": "https://github.com/grafana/vscode-alloy"
+    },
+    "engines": {
+        "vscode": "^1.69.0"
+    },
+    "categories": [
+        "Programming Languages"
+    ],
+    "contributes": {
+        "languages": [
+            {
+                "id": "alloy",
+                "aliases": [
+                    "Alloy",
+                    "alloy",
+                    "Grafana Alloy"
+                ],
+                "extensions": [
+                    ".alloy"
+                ],
+                "configuration": "./language-configuration.json"
+            }
+        ],
+        "grammars": [
+            {
+                "language": "alloy",
+                "scopeName": "source.alloy",
+                "path": "./syntaxes/alloy.tmLanguage.json"
+            }
+        ]
+    }
+}

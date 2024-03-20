@@ -1,6 +1,6 @@
 {
   "$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
-  "name": "Alloy",
+  "name": "Grafana Alloy",
   "patterns": [
     {
       "include": "#expression"
@@ -20,19 +20,19 @@
       "patterns": [
         {
           "match": "\\b(true|false|null)\\b",
-          "name": "constant.language.alloy"
+          "name": "constant.language.grafana-alloy"
         },
         {
           "match": "\\b(\\d+([Ee][+-]?\\d+)?)\\b",
-          "name": "constant.numeric.alloy"
+          "name": "constant.numeric.grafana-alloy"
         },
         {
           "match": "\\b\\d+[.]\\d*([Ee][+-]?\\d+)?\\b",
-          "name": "constant.numeric.alloy"
+          "name": "constant.numeric.grafana-alloy"
         },
         {
           "match": "\\b[.]\\d+([Ee][+-]?\\d+)?\\b",
-          "name": "constant.numeric.alloy"
+          "name": "constant.numeric.grafana-alloy"
         }
       ]
     },
@@ -40,69 +40,69 @@
       "patterns": [
         {
           "match": "//.*$",
-          "name": "comment.line.alloy"
+          "name": "comment.line.grafana-alloy"
         },
         {
           "begin": "/\\*",
           "end": "\\*/",
-          "name": "comment.block.alloy"
+          "name": "comment.block.grafana-alloy"
         }
       ]
     },
     "string": {
       "begin": "\"",
       "end": "\"",
-      "name": "string.quoted.double.alloy",
+      "name": "string.quoted.double.grafana-alloy",
       "patterns": [
         {
           "match": "\\\\[0-7]{3}",
-          "name": "constant.character.escape.alloy"
+          "name": "constant.character.escape.grafana-alloy"
         },
         {
           "match": "\\\\[abfnrtv'\"]",
-          "name": "constant.character.escape.alloy"
+          "name": "constant.character.escape.grafana-alloy"
         },
         {
           "match": "\\\\x[0-9a-fA-F]{2}",
-          "name": "constant.character.escape.alloy"
+          "name": "constant.character.escape.grafana-alloy"
         },
         {
           "match": "\\\\u[0-9a-fA-F]{4}",
-          "name": "constant.character.escape.alloy"
+          "name": "constant.character.escape.grafana-alloy"
         },
         {
           "match": "\\\\U[0-9a-fA-F]{8}",
-          "name": "constant.character.escape.alloy"
+          "name": "constant.character.escape.grafana-alloy"
         },
         {
           "match": "\\\\[^0-7xuUabfnrtv'\"]",
-          "name": "invalid.illegal.alloy"
+          "name": "invalid.illegal.grafana-alloy"
         }
       ]
     },
     "raw_string": {
       "begin": "`",
       "end": "`",
-      "name": "string.quoted.backtick.alloy"
+      "name": "string.quoted.backtick.grafana-alloy"
     },
     "block-header": {
       "match": "^\\s*([A-Za-z_][A-Za-z0-9_]*(?:\\.[A-Aa-z_][A-Za-z0-9_]*)*)([^\"=]*)(\".*\")?([^=]*)\\{",
       "captures": {
-        "1": { "name": "entity.name.type.alloy" },
+        "1": { "name": "entity.name.type.grafana-alloy" },
         "2": {
           "patterns": [
             { "include": "#comment" }
           ]
         },
-        "3": { "name": "entity.name.tag.alloy" },
+        "3": { "name": "entity.name.tag.grafana-alloy" },
         "4": {
           "patterns": [
             { "include": "#comment" }
           ]
         }
       },
-      "name": "meta.block-header.alloy"
+      "name": "meta.block-header.grafana-alloy"
     }
   },
-  "scopeName": "source.alloy"
+  "scopeName": "source.grafana-alloy"
 }

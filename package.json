@@ -18,11 +18,10 @@
     "contributes": {
         "languages": [
             {
-                "id": "alloy",
+                "id": "grafana-alloy",
                 "aliases": [
-                    "Alloy",
-                    "alloy",
-                    "Grafana Alloy"
+                    "Grafana Alloy",
+                    "Alloy"
                 ],
                 "extensions": [
                     ".alloy"
@@ -32,8 +31,8 @@
         ],
         "grammars": [
             {
-                "language": "alloy",
-                "scopeName": "source.alloy",
+                "language": "grafana-alloy",
+                "scopeName": "source.grafana-alloy",
                 "path": "./syntaxes/alloy.tmLanguage.json"
             }
         ]

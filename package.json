@@ -1,8 +1,9 @@
 {
     "name": "grafana-alloy",
+    "icon": "icon.png",
     "displayName": "Grafana Alloy",
     "description": "Grafana Alloy support",
-    "version": "0.1.0",
+    "version": "0.1.1",
     "author": "Grafana",
     "publisher": "Grafana",
     "repository": {

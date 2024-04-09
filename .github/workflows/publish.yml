@@ -1,8 +1,7 @@
 on:
-  # TODO(rfratto): Uncomment this when we're ready to publish automatically.
-  # push:
-  #   tags:
-  #     - "*"
+  push:
+    tags:
+      - "*"
   workflow_dispatch: {}
 
 # These permissions are needed to assume roles from Github's OIDC.
@@ -12,15 +11,7 @@ permissions:
 
 name: Publish Extension
 jobs:
-  eslint:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v2
-      - run: npm install
-      - run: npm run compile
-      - run: npm run lint
   publish:
-    needs: eslint
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2

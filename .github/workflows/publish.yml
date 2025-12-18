@@ -25,13 +25,13 @@ jobs:
             OPEN_VSX_TOKEN=openvsx:token
             VS_MARKETPLACE_TOKEN=vscode-marketplace:token
       - name: Publish to Open VSX
-        uses: HaaLeo/publish-vscode-extension@aae4c55fd9e724685834ff0a9488ad57c8f3ecf1 # v0
+        uses: HaaLeo/publish-vscode-extension@ca5561daa085dee804bf9f37fe0165785a9b14db # v2
         with:
           pat: ${{ env.OPEN_VSX_TOKEN }}
           registryUrl: https://open-vsx.org
       - name: Publish to Visual Studio Marketplace
         id: publishToMarketplace
-        uses: HaaLeo/publish-vscode-extension@aae4c55fd9e724685834ff0a9488ad57c8f3ecf1 # v0
+        uses: HaaLeo/publish-vscode-extension@ca5561daa085dee804bf9f37fe0165785a9b14db # v2
         with:
           pat: ${{ env.VS_MARKETPLACE_TOKEN }}
           registryUrl: https://marketplace.visualstudio.com

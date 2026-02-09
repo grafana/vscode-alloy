@@ -54,7 +54,7 @@
         "@types/node": "20.x",
         "@typescript-eslint/eslint-plugin": "^7.14.1",
         "@typescript-eslint/parser": "^7.11.0",
-        "eslint": "^8.57.0",
+        "eslint": "^10.0.0",
         "typescript": "^5.4.5",
         "@vscode/test-cli": "^0.0.9",
         "@vscode/test-electron": "^2.4.0"

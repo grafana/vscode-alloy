@@ -32,6 +32,16 @@
                 "configuration": "./language-configuration.json"
             }
         ],
+        "configuration": {
+            "title": "Grafana Alloy",
+            "properties": {
+                "binary.path": {
+                    "type": "string",
+                    "default": "alloy",
+                    "description": "Path to alloy binary, default to 'alloy', so it uses the $PATH variable. (reloading window is needed after changes)"
+                }
+            }
+        },
         "grammars": [
             {
                 "language": "grafana-alloy",

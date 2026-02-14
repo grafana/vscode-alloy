@@ -3,10 +3,13 @@ import * as vscode from "vscode";
 
 export function activate(_: vscode.ExtensionContext) {
   // Register a formatter if Alloy is installed.
-  exec("alloy --version", (error, stdout, stderr) => {
+
+  const binaryPath = vscode.workspace.getConfiguration("binary").get("path") as string;
+
+  exec(`${binaryPath} --version`, (error, stdout, stderr) => {
     if (error || stderr) {
       vscode.window.showWarningMessage(
-        `Alloy is not installed. Please install it from https://grafana.com/docs/alloy/latest/set-up/install/`
+        `Alloy is not installed (path ${binaryPath}). Please install it from https://grafana.com/docs/alloy/latest/set-up/install/`,
       );
       return;
     }
@@ -17,7 +20,7 @@ export function activate(_: vscode.ExtensionContext) {
       provideDocumentFormattingEdits(
         document: vscode.TextDocument
       ): vscode.TextEdit[] {
-        exec("alloy fmt -w " + document.fileName, (error, stdout, stderr) => {
+        exec(`${binaryPath} fmt -w ` + document.fileName, (error, stdout, stderr) => {
           if (error) {
             vscode.window.showErrorMessage(`Error: ${error.message}`);
           } else if (stderr) {
